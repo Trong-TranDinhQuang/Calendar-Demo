@@ -1,0 +1,77 @@
+.container {
+  border: 2px;
+  background-color: white;
+  border: 1.5px solid rgba(159, 159, 150, 0.21);
+}
+.rbc-calendar {
+  margin-top: 20px;
+  width: 1000px;
+  height: 700px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.rbc-calendar *,
+.rbc-calendar *:before,
+.rbc-calendar *:after {
+  box-sizing: inherit;
+}
+
+.rbc-abs-full {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.rbc-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbc-rtl {
+  direction: rtl;
+}
+
+.rbc-header {
+  overflow: hidden;
+  flex: 1 0 0%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 3px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 90%;
+  min-height: 0;
+  border-bottom: 1px solid;
+}
+
+.rbc-button-link {
+  color: inherit;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  user-select: text;
+}
+
+.rbc-row-content {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 4;
+}
+
+.rbc-row-content-scrollable {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

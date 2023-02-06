@@ -26,7 +26,7 @@ export default function BigCalendar() {
       ]);
   };
   return (
-    <div className="App">
+    <div className="container">
       <Calendar
         views={["day", "agenda", "work_week", "month"]}
         selectable
@@ -34,7 +34,6 @@ export default function BigCalendar() {
         defaultDate={new Date()}
         defaultView="month"
         events={eventsData}
-        style={{ height: "50vh" }}
         onSelectEvent={(event) => alert(event.title)}
         onSelectSlot={handleSelect}
       />
