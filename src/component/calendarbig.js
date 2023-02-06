@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import { Calendar, momentLocalizer } from "react-big-calendar";
+import { momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import events from "../events";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "./calendarbig.css";
+
+import Fullcalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
@@ -27,15 +32,22 @@ export default function BigCalendar() {
   };
   return (
     <div className="container">
-      <Calendar
-        views={["day", "agenda", "work_week", "month"]}
+      <Fullcalendar
         selectable
         localizer={localizer}
         defaultDate={new Date()}
-        defaultView="month"
         events={eventsData}
         onSelectEvent={(event) => alert(event.title)}
         onSelectSlot={handleSelect}
+        plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+        initialView={"dayGridMonth"}
+        headerToolbar={{
+          start: "today prev,next",
+          center: "title",
+          end: "dayGridMonth,timeGridWeek,timeGridDay",
+        }}
+        displayEventEnd="true"
+        eventColor={"#" + Math.floor(Math.random() * 16777215).toString(16)}
       />
     </div>
   );

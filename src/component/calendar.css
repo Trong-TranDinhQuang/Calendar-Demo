@@ -158,6 +158,7 @@ react_calendar abbr[data-original-title],
 }
 .react-calendar__month-view__days {
   margin-bottom: 10px;
+  height: 30vh;
 }
 .react-calendar__navigation__label {
   flex-grow: 0 !important;
