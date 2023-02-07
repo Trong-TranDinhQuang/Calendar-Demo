@@ -1,5 +1,6 @@
 .leftbar {
   background-color: white;
+  border: 2px solid rgba(159, 159, 150, 0.21);
 }
 .react-calendar {
   width: 400px;
@@ -199,4 +200,10 @@ react_calendar abbr[data-original-title],
 .name-evens {
   color: white;
   margin-left: 10px;
+}
+.title-even-webnar {
+  margin-top: 10px;
+}
+.title-even-new {
+  margin-top: 10px;
 }
