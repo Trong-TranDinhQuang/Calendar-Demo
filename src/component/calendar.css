@@ -163,3 +163,40 @@ react_calendar abbr[data-original-title],
 .react-calendar__navigation__label {
   flex-grow: 0 !important;
 }
+.Notification {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Title {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0f4c81;
+}
+.btn-view {
+  background-color: #0f4c81;
+  width: 80px;
+  height: 30px;
+  margin-right: 10px;
+  color: white;
+  border: 1px solid #0362d4;
+  text-transform: capitalize;
+  border-radius: 40px;
+}
+.title-bs {
+  margin-left: 10px;
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(63, 63, 50, 0.465);
+  justify-content: space-between;
+}
+.name-even {
+  margin-left: 10px;
+}
+.name-evens {
+  color: white;
+  margin-left: 10px;
+}

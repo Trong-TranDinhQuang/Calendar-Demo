@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { momentLocalizer } from "react-big-calendar";
+import Select from "react-select";
 import moment from "moment";
 import events from "../events";
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -12,8 +13,15 @@ import interactionPlugin from "@fullcalendar/interaction";
 
 moment.locale("en-GB");
 const localizer = momentLocalizer(moment);
+const options = [
+  { value: "dayGridMonth", label: "Month" },
+  { value: "timeGridWeek", label: "WorkWeek" },
+  { value: "timeGridDay", label: "Day" },
+];
 
 export default function BigCalendar() {
+  const [selectedOption, setSelectedOption] = useState(null);
+
   const [eventsData, setEventsData] = useState(events);
 
   const handleSelect = ({ start, end }) => {
