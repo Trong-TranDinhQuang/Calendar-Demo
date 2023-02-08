@@ -16,6 +16,11 @@ const localizer = momentLocalizer(moment);
 export default function BigCalendar() {
   const [eventsData, setEventsData] = useState(events);
 
+  const handleEventClick = (eventClickInfo) => {
+    window.location.href =
+      "https://www.eventbrite.com/e/hanoi-burns-supper-2023-tickets-467288070197?aff=ebdssbcitybrowse";
+  };
+
   const handleSelect = ({ start, end }) => {
     console.log(start);
     console.log(end);
@@ -38,6 +43,7 @@ export default function BigCalendar() {
         defaultDate={new Date()}
         events={eventsData}
         onSelectEvent={(event) => alert(event.title)}
+        eventClick={handleEventClick}
         onSelectSlot={handleSelect}
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}

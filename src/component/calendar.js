@@ -62,54 +62,57 @@ export default function SmallCalendar(props) {
         </div>
         <div className="list-even">
           <div className="title-bs">Today,4 Apr</div>
-
-          <div className="title-even">
-            <div className="even">
-              <h3 className="name-even">{date.toDateString()}</h3>
-              <span className="icon-video">
-                <BsCameraVideo size="1.5rem" />
-              </span>
+          {showEvents && (
+            <div className="title-even">
+              <div className="even">
+                <h3 className="name-even">{date.toDateString()}</h3>
+                <span className="icon-video">
+                  <BsCameraVideo size="1.5rem" />
+                </span>
+              </div>
+              <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
+              <div className="user">
+                <span className="icon-user">
+                  <BiUserCircle size="2rem" />
+                </span>
+                <a href="https://xuanthulab.net">View client profile</a>
+              </div>
             </div>
-            <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
-            <div className="user">
-              <span className="icon-user">
-                <BiUserCircle size="2rem" />
-              </span>
-              <a href="https://xuanthulab.net">View client profile</a>
+          )}
+          {showEvents && (
+            <div className="title-even-new">
+              <div className="even">
+                <h3 className="name-even">{date.toDateString()}</h3>
+                <span className="icon-video">
+                  <BsCameraVideo size="1.5rem" />
+                </span>
+              </div>
+              <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
+              <div className="user">
+                <span className="icon-user">
+                  <BiUserCircle size="2rem" />
+                </span>
+                <a href="https://xuanthulab.net">View client profile</a>
+              </div>
             </div>
-          </div>
-
-          <div className="title-even-new">
-            <div className="even">
-              <h3 className="name-even">{date.toDateString()}</h3>
-              <span className="icon-video">
-                <BsCameraVideo size="1.5rem" />
-              </span>
+          )}
+          {showEvents && (
+            <div className="title-even-webnar">
+              <div className="even">
+                <h3 className="name-evens">{date.toDateString()}</h3>
+                <span className="icon-video">
+                  <BsCameraVideo size="1.5rem" />
+                </span>
+              </div>
+              <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
+              <div className="user">
+                <span className="icon-user">
+                  <BiUserCircle size="2rem" />
+                </span>
+                <a href="https://xuanthulab.net">View client profile</a>
+              </div>
             </div>
-            <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
-            <div className="user">
-              <span className="icon-user">
-                <BiUserCircle size="2rem" />
-              </span>
-              <a href="https://xuanthulab.net">View client profile</a>
-            </div>
-          </div>
-
-          <div className="title-even-webnar">
-            <div className="even">
-              <h3 className="name-evens">{date.toDateString()}</h3>
-              <span className="icon-video">
-                <BsCameraVideo size="1.5rem" />
-              </span>
-            </div>
-            <div className="time-line">9:00 AM - 9:30 AM GTM +8</div>
-            <div className="user">
-              <span className="icon-user">
-                <BiUserCircle size="2rem" />
-              </span>
-              <a href="https://xuanthulab.net">View client profile</a>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

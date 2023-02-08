@@ -4,6 +4,9 @@ const events = [
     title: "Long Event",
     start: getDate("YEAR-MONTH-08"),
     end: getDate("YEAR-MONTH-2"),
+
+    // onclick: (window.location.href =
+    //   "https://www.eventbrite.com/e/hanoi-burns-supper-2023-tickets-467288070197?aff=ebdssbcitybrowse"),
   },
   {
     groupId: "999",
